@@ -1,1 +1,24 @@
-<p>search works!</p>
+<div *ngIf="!has_searched">
+    <div id="searchbardiv">
+        <form [formGroup]="searchForm" (submit)="searchtest()">
+            <div>
+                <br>
+                <input id="searchbar" type="text" class="searchbar">
+                <button type="submit" class="btn btn-primary searchbutton"> search </button>
+            </div>
+        </form>
+    </div>
+    <app-search-results [data]="data" [searchTerm]="searchTerm"></app-search-results>
+</div>
+
+<div *ngIf="has_searched">
+    <div id="searchbardiv">
+        <form [formGroup]="searchForm" (submit)="searchtest()">
+            <div id="searchgroup">
+                <img src="../assets/videohat_logo_inverted.png" class="app-logo" alt="">
+                <input id="searchbar" type="text" class="searchbar">
+                <button type="submit" class="btn btn-primary searchbutton"> search </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { AuthService } from './auth.service';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AuthService } from './auth.service';
     RegisterComponent,
     SearchComponent,
     SearchResultsComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileComponent
   ],
   
   imports: [
